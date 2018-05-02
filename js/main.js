@@ -18,20 +18,7 @@ $closes.on("click", function () {
     }, 600)
 });
 
-$(function () {
-    setTimeout(function () {
-        $('.capa').addClass('page-moveToTop');
-        $('.slide-01').addClass('page-moveToTop');
-        setTimeout(function () {
-        },600);
-    },2000);
-    // $('.capa')
-    // $('html, body').animate({
-    //     scrollTop: 0
-    // }, 100);
-    // setTimeout(function () {
-    //     $('html, body').animate({
-    //         scrollTop: $(".slide-01").offset().top
-    //     }, 1000);
-    // }, 2000);
+$('.arrow-down').click(function () {
+    $('.capa').addClass('page-moveToTop');
+    $('.slide-01').addClass('page-moveToTop');
 });

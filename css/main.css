@@ -124,6 +124,7 @@ html {
 
 .capa {
     height: 100vh;
+    position: relative;
 }
 
 .capa .image-container {
@@ -131,7 +132,7 @@ html {
     float: right;
     overflow: hidden;
     width: 60%;
-    height: 90vh;
+    height: 84vh;
     margin-top: 3vh;
 }
 
@@ -157,6 +158,22 @@ html {
     position: absolute;
     top: 22%;
     left: 10%;
+}
+
+.capa .arrow-down {
+    position: absolute;
+    bottom: 1rem;
+    left: -webkit-calc(50% - 3rem);
+    left: calc(50% - 3rem);
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.capa .arrow-down i {
+    font-size: 6rem;
+    color: #000;
 }
 
 .slide-01 {
@@ -340,8 +357,8 @@ html {
 /* The Close Button */
 .close {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 1rem;
+    right: 1.6rem;
     color: #aaaaaa;
     font-weight: lighter;
     font-size: 4rem;
@@ -349,6 +366,7 @@ html {
     height: 4rem;
     width: 4rem;
     text-align: center;
+    z-index: 5;
 }
 
 .close:hover,
@@ -461,6 +479,21 @@ blockquote span {
     bottom: 0;
     left: 0;
     opacity: .7;
+}
+
+@keyframes floating {
+    from {
+        -webkit-transform: translate(0, 0px);
+        transform: translate(0, 0px);
+    }
+    65% {
+        -webkit-transform: translate(0, 15px);
+        transform: translate(0, 15px);
+    }
+    to {
+        -webkit-transform: translate(0, -0px);
+        transform: translate(0, -0px);
+    }
 }
 
 @-webkit-keyframes moveToLeft {
@@ -584,46 +617,229 @@ blockquote span {
 }
 
 .page-moveToLeft {
-    -webkit-animation: moveToLeft .6s ease-out both;
-    animation: moveToLeft .6s ease-out both;
+    -webkit-animation: moveToLeft 1s ease both;
+    animation: moveToLeft 1s ease both;
 }
 
 .page-moveFromLeft {
-    -webkit-animation: moveFromLeft .6s ease-out both;
-    animation: moveFromLeft .6s ease-out both;
+    -webkit-animation: moveFromLeft 1s ease both;
+    animation: moveFromLeft 1s ease both;
 }
 
 .page-moveToRight {
-    -webkit-animation: moveToRight .6s ease-out both;
-    animation: moveToRight .6s ease-out both;
+    -webkit-animation: moveToRight 1s ease both;
+    animation: moveToRight 1s ease both;
 }
 
 .page-moveFromRight {
-    -webkit-animation: moveFromRight .6s ease-out both;
-    animation: moveFromRight .6s ease-out both;
+    -webkit-animation: moveFromRight 1s ease both;
+    animation: moveFromRight 1s ease both;
 }
 
 .page-moveToTop {
-    -webkit-animation: moveToTop .6s ease-out both;
-    animation: moveToTop .6s ease-out both;
+    -webkit-animation: moveToTop 1s ease both;
+    animation: moveToTop 1s ease both;
 }
 
 .page-moveFromTop {
-    -webkit-animation: moveFromTop .6s ease-out both;
-    animation: moveFromTop .6s ease-out both;
+    -webkit-animation: moveFromTop 1s ease both;
+    animation: moveFromTop 1s ease both;
 }
 
 .page-moveToBottom {
-    -webkit-animation: moveToBottom .6s ease-out both;
-    animation: moveToBottom .6s ease-out both;
+    -webkit-animation: moveToBottom 1s ease both;
+    animation: moveToBottom 1s ease both;
 }
 
 .page-moveFromBottom {
-    -webkit-animation: moveFromBottom .6s ease-out both;
-    animation: moveFromBottom .6s ease-out both;
+    -webkit-animation: moveFromBottom 1s ease both;
+    animation: moveFromBottom 1s ease both;
 }
 
 body,
 .overflow-hidden {
     overflow: hidden;
+}
+
+.slide-01 {
+    display: block;
+    z-index: 1200;
+}
+
+@media only screen and (max-width: 1600px) {
+    blockquote {
+        left: 9%;
+        font-size: 1.8rem;
+        padding: 2rem 7rem 3rem 3rem;
+        width: 63rem;
+        height: 38rem;
+    }
+
+    .modal .modal-content .quadrado {
+        width: 32em;
+        height: 25em;
+        border-bottom: 2.4em solid #f3b562;
+        border-right: 2.4em solid #f3b562;
+    }
+
+    .capa .titulo {
+        font-size: 5rem;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    blockquote {
+        font-size: 1.6rem;
+        width: 53rem;
+        height: 33rem;
+    }
+
+    .modal .modal-content .quadrado {
+        width: 28em;
+        height: 23em;
+        border-bottom: 2em solid #f3b562;
+        border-right: 2em solid #f3b562;
+    }
+
+    .slide-01 .titulo {
+        font-size: 4rem;
+    }
+
+    .capa .titulo {
+        font-size: 4rem;
+        padding: 4rem 7rem 4rem 2rem;
+    }
+
+    .capa .arrow-down i {
+        font-size: 5rem;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    blockquote {
+        font-size: 1.4rem;
+        width: 46rem;
+        height: 31rem;
+    }
+
+    .modal .modal-content .quadrado {
+        width: 22em;
+        height: 18em;
+    }
+
+    .capa .titulo {
+        font-size: 3rem;
+        padding: 3rem 5rem 3rem 2rem;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    blockquote {
+        font-size: 1.2rem;
+        left: 7%;
+        width: 38rem;
+        height: 28rem;
+        padding: 1.2rem 5rem 2rem 2rem;
+    }
+
+    .modal .modal-content .quadrado {
+        width: 18em;
+        height: 16em;
+        border-bottom: 1.6em solid #f3b562;
+        border-right: 1.6em solid #f3b562;
+    }
+
+    .modal .image-container {
+        margin-right: 5%;
+    }
+
+    .slide-01 .titulo {
+        font-size: 3rem;
+    }
+
+    .capa .arrow-down i {
+        font-size: 4rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .modal-content {
+        height: 100%;
+    }
+
+    blockquote {
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        background-color: inherit !important;
+        padding: 0;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        margin: 6rem auto 0;
+        width: 80%;
+    }
+
+    .modal .close {
+        color: #e8e8e8;
+    }
+
+    .modal .modal-content .quadrado {
+        display: none;
+    }
+
+    .modal .image-container {
+        float: none;
+        width: 100%;
+        height: 100%;
+    }
+
+    .modal .image-container img {
+        height: 100%;
+    }
+
+    .slide-01 .titulo {
+        font-size: 2rem;
+        -webkit-transform: rotate(0deg) translate(-50%, -50%);
+        -moz-transform: rotate(0deg) translate(-50%, -50%);
+        -ms-transform: rotate(0deg) translate(-50%, -50%);
+        -o-transform: rotate(0deg) translate(-50%, -50%);
+        transform: rotate(0deg) translate(-50%, -50%);
+    }
+
+    .capa .image-container {
+        float: none;
+        width: 100%;
+        height: 100%;
+        margin-top: 0;
+    }
+
+    .capa .titulo {
+        bottom: 10%;
+        right: 0;
+        left: inherit;
+        top: inherit;
+        /*width: 100%;*/
+        font-size: 2rem;
+        padding: 2rem 4rem 2rem 2rem;
+    }
+
+    .insubstituivel, .aprendizagem, .ensinar, .pensar, .profissional, .mudancas, .complexidade, .inovar {
+        width: 100%;
+        height: 12.5%;
+    }
+
+    .tira img {
+        width: 100% !important;
+        height: 12.5vh !important;
+        -webkit-transition: none;
+        transition: none;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    .capa .arrow-down i {
+        font-size: 3rem;
+    }
 }
