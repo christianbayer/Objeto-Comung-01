@@ -1,0 +1,629 @@
+/***************
+ *    RESET    *
+ ***************/
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, em, img, strong, b, u, i, ol, ul, li, form, label, table, caption,
+tbody, tfoot, thead, tr, th, td, aside, blockquote, figure, figcaption, footer, header, nav, section, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+article, aside, details, blockquote, figcaption, figure, footer, header, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/***************
+ *    FONTS    *
+ ***************/
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 100;
+    src: local('Roboto'), local('Roboto'), url("../fonts/Roboto/Roboto-Thin.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Roboto'), local('Roboto'), url("../fonts/Roboto/Roboto-Light.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto'), local('Roboto'), url("../fonts/Roboto/Roboto-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Roboto'), local('Roboto'), url("../fonts/Roboto/Roboto-Medium.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Roboto'), local('Roboto'), url("../fonts/Roboto/Roboto-Bold.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Roboto'), local('Roboto'), url("../fonts/Roboto/Roboto-Black.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Open Sans'), local('Open-Sans'), url("../fonts/Open-Sans/OpenSans-Light.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('Open-Sans'), url("../fonts/Open-Sans/OpenSans-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Open Sans'), local('Open-Sans'), url("../fonts/Open-Sans/OpenSans-SemiBold.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Open Sans'), local('Open-Sans'), url("../fonts/Open-Sans/OpenSans-Bold.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Open Sans'), local('Open-Sans'), url("../fonts/Open-Sans/OpenSans-ExtraBold.ttf") format('truetype');
+}
+
+/***************
+ *    BASIC    *
+ ***************/
+html {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    font-family: 'Open Sans', 'Roboto', sans-serif;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.capa {
+    height: 100vh;
+}
+
+.capa .image-container {
+    position: relative;
+    float: right;
+    overflow: hidden;
+    width: 60%;
+    height: 90vh;
+    margin-top: 3vh;
+}
+
+.capa img {
+    float: right;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    object-fit: cover;
+}
+
+.capa .titulo {
+    font-size: 6rem;
+    background: #1a1f17;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    display: inline-block;
+    padding: 5rem 9rem 5rem 2rem;
+    z-index: 5;
+    position: absolute;
+    top: 22%;
+    left: 10%;
+}
+
+.slide-01 {
+    width: 100%;
+    height: 100vh;
+}
+
+.slide-01 .titulo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: rotate(270deg) translate(-50%, -50%);
+    -moz-transform: rotate(270deg) translate(-50%, -50%);
+    -ms-transform: rotate(270deg) translate(-50%, -50%);
+    -o-transform: rotate(270deg) translate(-50%, -50%);
+    transform: rotate(270deg) translate(-50%, -50%);
+    font-size: 5rem;
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
+    z-index: 3;
+}
+
+.insubstituivel,
+.aprendizagem,
+.ensinar,
+.pensar,
+.profissional,
+.mudancas,
+.complexidade,
+.inovar {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    display: inline-block;
+    float: left;
+    width: 12.5%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    line-height: 0;
+    position: relative;
+}
+
+.slide-01 a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.tira .image-container {
+    overflow: hidden;
+}
+
+.tira img {
+    height: 100vh;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    object-fit: cover;
+    opacity: .3;
+    max-width: none;
+    width: -webkit-calc(100% + 50px);
+    width: calc(100% + 50px);
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-40px, 0, 0);
+    transform: translate3d(-40px, 0, 0);
+}
+
+.tira:hover img {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+#insubstituivel .overlay,
+.insubstituivel {
+    color: #dca75f;
+    /*background-color: #1f07fa;*/
+    background-color: #003292;
+}
+
+#aprendizagem .overlay,
+.aprendizagem {
+    /*background-color: #e7b562;*/
+    background-color: #92846a;
+}
+
+#ensinar .overlay,
+.ensinar {
+    color: #dca75f;
+    /*background-color: #81145e;*/
+    /*background-color: #4a0e5d;*/
+    background-color: #791f76;
+}
+
+#pensar .overlay,
+.pensar {
+    /*background-color: #29f4bb;*/
+    /*background-color: #28755f;*/
+    background-color: #157b52;
+}
+
+#profissional .overlay,
+.profissional {
+    color: #dca75f;
+    /*background-color: #000f4b;*/
+    background-color: #001d4a;
+}
+
+#mudancas .overlay,
+.mudancas {
+    /*background-color: #e93b43;*/
+    /*background-color: #5f1414;*/
+    background-color: #8e1414;
+}
+
+#complexidade .overlay,
+.complexidade {
+    color: #dca75f;
+    /*background-color: #2f7378;*/
+    background-color: #10393c;
+}
+
+#inovar .overlay,
+.inovar {
+    /*background-color: #c57b22;*/
+    background-color: #4c371e;
+}
+
+.colors {
+    /* Texto 1*/
+    color: #cd9953;
+    /* Texto 2*/
+    color: #001225;
+
+    /* Insubstituivel */
+    color: #1f07fa;
+    /* Aprendizagem */
+    color: #e7b562;
+    /* Ensinar */
+    color: #81145e;
+    /* Pensar */
+    color: #29f4bb;
+    /* Profissional */
+    color: #000f4b;
+    /* Mudanças */
+    color: #e93b43;
+    /* Complexidade */
+    color: #2f7378;
+    /* Inovar */
+    color: #c57b22;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    padding: 0;
+    margin: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #fff; /* Fallback color */
+    overflow: hidden;
+}
+
+/* Modal Content */
+.modal-content {
+    /*background-color: #fefefe;*/
+    /*margin: 0 auto;*/
+    /*width: 80%;*/
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #aaaaaa;
+    font-weight: lighter;
+    font-size: 4rem;
+    line-height: 4rem;
+    height: 4rem;
+    width: 4rem;
+    text-align: center;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#pensar blockquote span,
+#ensinar blockquote span,
+#profissional blockquote span,
+#mudancas blockquote span,
+#complexidade blockquote span,
+#inovar blockquote span,
+#insubstituivel blockquote span {
+    color: #dca75f;
+}
+
+#aprendizagem blockquote span {
+    color: #001225;
+}
+
+#insubstituivel blockquote {
+    background-color: rgba(0, 9, 28, 0.9);
+}
+
+#aprendizagem blockquote {
+    background-color: rgba(243, 160, 23, 0.9);
+}
+
+#ensinar blockquote {
+    background-color: rgba(47, 4, 40, 0.9);
+}
+
+#pensar blockquote {
+    background-color: rgba(15, 54, 42, 0.9);
+}
+
+#profissional blockquote {
+    background-color: rgba(27, 4, 115, 0.9);
+}
+
+#mudancas blockquote {
+    background-color: rgba(201, 13, 24, 0.9);
+}
+
+#complexidade blockquote {
+    background-color: rgba(25, 47, 72, 0.9);
+}
+
+#inovar blockquote {
+    background-color: rgba(90, 65, 18, 0.9);
+}
+
+blockquote {
+    position: absolute;
+    font-weight: 500;
+    top: 22%;
+    left: 13%;
+    color: #fff;
+    font-size: 2rem;
+    line-height: 1.5;
+    text-align: justify;
+    padding: 3rem 10rem 10rem 4rem;
+    width: 68rem;
+    height: 42rem;
+    z-index: 150;
+    -webkit-box-shadow: 10px 10px 60px 0 rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 10px 10px 60px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 10px 10px 60px 0 rgba(0, 0, 0, 0.5);
+}
+
+blockquote span {
+    font-weight: 700;
+}
+
+.modal .image-container {
+    position: relative;
+    float: right;
+    overflow: hidden;
+    width: 30%;
+    margin-right: 10%;
+}
+
+.modal img {
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    object-fit: cover;
+}
+
+.modal .modal-content .quadrado {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40em;
+    height: 30em;
+    background-color: #f2ebbf;
+    border-bottom: 3em solid #f3b562;
+    border-right: 3em solid #f3b562;
+}
+
+.modal .modal-content .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: .7;
+}
+
+@-webkit-keyframes moveToLeft {
+    from {
+    }
+    to {
+        -webkit-transform: translateX(-100%);
+    }
+}
+
+@keyframes moveToLeft {
+    from {
+    }
+    to {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+}
+
+@-webkit-keyframes moveFromLeft {
+    from {
+        -webkit-transform: translateX(-100%);
+    }
+}
+
+@keyframes moveFromLeft {
+    from {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+}
+
+@-webkit-keyframes moveToRight {
+    from {
+    }
+    to {
+        -webkit-transform: translateX(100%);
+    }
+}
+
+@keyframes moveToRight {
+    from {
+    }
+    to {
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+}
+
+@-webkit-keyframes moveFromRight {
+    from {
+        -webkit-transform: translateX(100%);
+    }
+}
+
+@keyframes moveFromRight {
+    from {
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+}
+
+@-webkit-keyframes moveToTop {
+    from {
+    }
+    to {
+        -webkit-transform: translateY(-100%);
+    }
+}
+
+@keyframes moveToTop {
+    from {
+    }
+    to {
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+}
+
+@-webkit-keyframes moveFromTop {
+    from {
+        -webkit-transform: translateY(-100%);
+    }
+}
+
+@keyframes moveFromTop {
+    from {
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+}
+
+@-webkit-keyframes moveToBottom {
+    from {
+    }
+    to {
+        -webkit-transform: translateY(100%);
+    }
+}
+
+@keyframes moveToBottom {
+    from {
+    }
+    to {
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+}
+
+@-webkit-keyframes moveFromBottom {
+    from {
+        -webkit-transform: translateY(100%);
+    }
+}
+
+@keyframes moveFromBottom {
+    from {
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+}
+
+.page-moveToLeft {
+    -webkit-animation: moveToLeft .6s ease-out both;
+    animation: moveToLeft .6s ease-out both;
+}
+
+.page-moveFromLeft {
+    -webkit-animation: moveFromLeft .6s ease-out both;
+    animation: moveFromLeft .6s ease-out both;
+}
+
+.page-moveToRight {
+    -webkit-animation: moveToRight .6s ease-out both;
+    animation: moveToRight .6s ease-out both;
+}
+
+.page-moveFromRight {
+    -webkit-animation: moveFromRight .6s ease-out both;
+    animation: moveFromRight .6s ease-out both;
+}
+
+.page-moveToTop {
+    -webkit-animation: moveToTop .6s ease-out both;
+    animation: moveToTop .6s ease-out both;
+}
+
+.page-moveFromTop {
+    -webkit-animation: moveFromTop .6s ease-out both;
+    animation: moveFromTop .6s ease-out both;
+}
+
+.page-moveToBottom {
+    -webkit-animation: moveToBottom .6s ease-out both;
+    animation: moveToBottom .6s ease-out both;
+}
+
+.page-moveFromBottom {
+    -webkit-animation: moveFromBottom .6s ease-out both;
+    animation: moveFromBottom .6s ease-out both;
+}
+
+body,
+.overflow-hidden {
+    overflow: hidden;
+}
