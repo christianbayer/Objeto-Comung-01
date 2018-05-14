@@ -122,104 +122,135 @@ html {
     clear: both;
 }
 
+.overflow-hidden {
+    overflow: hidden;
+}
+
 .capa {
     height: 100vh;
     position: relative;
+    background-color: rgb(0, 29, 74);
 }
 
-.capa .image-container {
-    position: relative;
-    float: right;
-    overflow: hidden;
-    width: 60%;
-    height: 84vh;
-    margin-top: 3vh;
-}
-
-.capa img {
-    float: right;
-    height: 100%;
-    width: 100%;
-    padding: 0;
-    border: 0;
-    margin: 0;
-    object-fit: cover;
+.capa .background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url("../images/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .2;
 }
 
 .capa .titulo {
-    font-size: 6rem;
-    background: #1a1f17;
-    color: #fff;
+    font-size: 8rem;
+    color: #dca75f;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     display: inline-block;
-    padding: 5rem 9rem 5rem 2rem;
+    padding: 0;
     z-index: 5;
     position: absolute;
-    top: 22%;
+    top: 10%;
     left: 10%;
 }
 
 .capa .arrow-down {
     position: absolute;
-    bottom: 1rem;
-    left: -webkit-calc(50% - 3rem);
-    left: calc(50% - 3rem);
+    bottom: 3rem;
+    left: -webkit-calc(50% - 10rem);
+    left: calc(50% - 10rem);
+    width: 20rem;
+    text-align: center;
+    text-decoration: none;
     animation-name: floating;
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 }
 
+.capa .arrow-down span {
+    color: #fff;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: -.6rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
 .capa .arrow-down i {
     font-size: 6rem;
-    color: #000;
+    color: #fff;
 }
 
-.slide-01 {
+.ancoras {
+    background: #fff;
     width: 100%;
-    height: 100vh;
-}
-
-.slide-01 .titulo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: rotate(270deg) translate(-50%, -50%);
-    -moz-transform: rotate(270deg) translate(-50%, -50%);
-    -ms-transform: rotate(270deg) translate(-50%, -50%);
-    -o-transform: rotate(270deg) translate(-50%, -50%);
-    transform: rotate(270deg) translate(-50%, -50%);
-    font-size: 5rem;
-    -webkit-transform-origin: 0 0;
-    -moz-transform-origin: 0 0;
-    -o-transform-origin: 0 0;
-    transform-origin: 0 0;
-    z-index: 3;
-}
-
-.insubstituivel,
-.aprendizagem,
-.ensinar,
-.pensar,
-.profissional,
-.mudancas,
-.complexidade,
-.inovar {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    display: inline-block;
-    float: left;
-    width: 12.5%;
-    height: 100%;
-    padding: 0;
-    border: 0;
-    margin: 0;
-    line-height: 0;
+    min-height: 100vh;
+    overflow: hidden;
     position: relative;
 }
 
-.slide-01 a {
+.ancoras h1 {
+    font-size: 6rem;
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.ancora {
+    width: 25%;
+    height: 28em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    display: none;
+    float: left;
+    padding: 2rem;
+    border: 0;
+    margin: 0;
+    position: relative;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+}
+
+.ancora .titulo {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+.ancora .image-container {
+    overflow: hidden;
+    width: 20em;
+    height: 20em;
+    position: relative;
+    margin: 0 auto;
+}
+
+.ancora .image-container img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.ancora:hover {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.ancora.professor,
+.ancora.ensino,
+.ancora.conhecimento-profissional,
+.ancora.complexidade {
+    color: #f86267;
+}
+
+.ancora a {
     position: absolute;
     top: 0;
     right: 0;
@@ -228,177 +259,134 @@ html {
     z-index: 5;
 }
 
-.tira .image-container {
-    overflow: hidden;
+.ancora .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: .7;
+    border-radius: 50%;
 }
 
-.tira img {
-    height: 100vh;
-    padding: 0;
-    border: 0;
-    margin: 0;
-    object-fit: cover;
-    opacity: .3;
-    max-width: none;
-    width: -webkit-calc(100% + 50px);
-    width: calc(100% + 50px);
-    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-    transition: opacity 0.35s, transform 0.35s;
-    -webkit-transform: translate3d(-40px, 0, 0);
-    transform: translate3d(-40px, 0, 0);
+.ancora.complexidade img,
+.ancora.mudancas img,
+.ancora.ensino img,
+.ancora.conhecimento-profissional img {
+    object-position: bottom;
 }
 
-.tira:hover img {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-}
-
-#insubstituivel .overlay,
-.insubstituivel {
-    color: #dca75f;
-    /*background-color: #1f07fa;*/
+#professor .overlay,
+.professor .overlay {
     background-color: #003292;
 }
 
-#aprendizagem .overlay,
-.aprendizagem {
-    /*background-color: #e7b562;*/
+#culto-aprendizagem .overlay,
+.culto-aprendizagem .overlay {
     background-color: #92846a;
 }
 
-#ensinar .overlay,
-.ensinar {
-    color: #dca75f;
-    /*background-color: #81145e;*/
-    /*background-color: #4a0e5d;*/
+#ensino .overlay,
+.ensino .overlay {
     background-color: #791f76;
 }
 
 #pensar .overlay,
-.pensar {
-    /*background-color: #29f4bb;*/
-    /*background-color: #28755f;*/
+.pensar .overlay {
     background-color: #157b52;
 }
 
-#profissional .overlay,
-.profissional {
-    color: #dca75f;
-    /*background-color: #000f4b;*/
+#conhecimento-profissional .overlay,
+.conhecimento-profissional .overlay {
     background-color: #001d4a;
 }
 
 #mudancas .overlay,
-.mudancas {
-    /*background-color: #e93b43;*/
-    /*background-color: #5f1414;*/
+.mudancas .overlay {
     background-color: #8e1414;
 }
 
 #complexidade .overlay,
-.complexidade {
-    color: #dca75f;
-    /*background-color: #2f7378;*/
+.complexidade .overlay {
     background-color: #10393c;
 }
 
-#inovar .overlay,
-.inovar {
-    /*background-color: #c57b22;*/
+#inovacao .overlay,
+.inovacao .overlay {
     background-color: #4c371e;
 }
 
-.colors {
-    /* Texto 1*/
-    color: #cd9953;
-    /* Texto 2*/
-    color: #001225;
-
-    /* Insubstituivel */
-    color: #1f07fa;
-    /* Aprendizagem */
-    color: #e7b562;
-    /* Ensinar */
-    color: #81145e;
-    /* Pensar */
-    color: #29f4bb;
-    /* Profissional */
-    color: #000f4b;
-    /* Mudanças */
-    color: #e93b43;
-    /* Complexidade */
-    color: #2f7378;
-    /* Inovar */
-    color: #c57b22;
-}
-
-/* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 100; /* Sit on top */
+    display: none;
+    position: fixed;
+    z-index: 100;
     padding: 0;
     margin: 0;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #fff; /* Fallback color */
+    background-color: #fff;
     overflow: hidden;
 }
 
-/* Modal Content */
-.modal-content {
-    /*background-color: #fefefe;*/
-    /*margin: 0 auto;*/
-    /*width: 80%;*/
-}
-
-/* The Close Button */
-.close {
+.back {
     position: absolute;
-    top: 1rem;
-    right: 1.6rem;
+    left: 1em;
+    top: -webkit-calc(50% - 3rem);
+    top: calc(50% - 3rem);
     color: #aaaaaa;
     font-weight: lighter;
-    font-size: 4rem;
-    line-height: 4rem;
-    height: 4rem;
-    width: 4rem;
+
     text-align: center;
-    z-index: 5;
+    z-index: 500;
+    height: 6rem;
+    width: 6rem;
+    animation-name: floating-x;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 
-.close:hover,
-.close:focus {
+/*.back a{*/
+/*}*/
+.back i {
+    font-size: 6rem;
+    line-height: 6rem;
+    height: 6rem;
+    width: 6rem;
+}
+
+.back:hover,
+.back:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
 }
 
 #pensar blockquote span,
-#ensinar blockquote span,
-#profissional blockquote span,
+#ensino blockquote span,
+#conhecimento-profissional blockquote span,
 #mudancas blockquote span,
 #complexidade blockquote span,
-#inovar blockquote span,
-#insubstituivel blockquote span {
+#inovacao blockquote span,
+#professor blockquote span {
     color: #dca75f;
 }
 
-#aprendizagem blockquote span {
+#culto-aprendizagem blockquote span {
     color: #001225;
 }
 
-#insubstituivel blockquote {
+#professor blockquote {
     background-color: rgba(0, 9, 28, 0.9);
 }
 
-#aprendizagem blockquote {
+#culto-aprendizagem blockquote {
     background-color: rgba(243, 160, 23, 0.9);
 }
 
-#ensinar blockquote {
+#ensino blockquote {
     background-color: rgba(47, 4, 40, 0.9);
 }
 
@@ -406,7 +394,7 @@ html {
     background-color: rgba(15, 54, 42, 0.9);
 }
 
-#profissional blockquote {
+#conhecimento-profissional blockquote {
     background-color: rgba(27, 4, 115, 0.9);
 }
 
@@ -418,15 +406,16 @@ html {
     background-color: rgba(25, 47, 72, 0.9);
 }
 
-#inovar blockquote {
+#inovacao blockquote {
     background-color: rgba(90, 65, 18, 0.9);
 }
 
 blockquote {
+    /*display: none;*/
     position: absolute;
     font-weight: 500;
-    top: 22%;
-    left: 13%;
+    top: 18%;
+    left: 16%;
     color: #fff;
     font-size: 2rem;
     line-height: 1.5;
@@ -449,7 +438,7 @@ blockquote span {
     float: right;
     overflow: hidden;
     width: 30%;
-    margin-right: 10%;
+    margin-right: 6%;
 }
 
 .modal img {
@@ -493,6 +482,21 @@ blockquote span {
     to {
         -webkit-transform: translate(0, -0px);
         transform: translate(0, -0px);
+    }
+}
+
+@keyframes floating-x {
+    from {
+        -webkit-transform: translate(0, 0px);
+        transform: translate(0, 0px);
+    }
+    65% {
+        -webkit-transform: translate(15px, 0);
+        transform: translate(15px, 0);
+    }
+    to {
+        -webkit-transform: translate(-0px, 0);
+        transform: translate(-0px, 0);
     }
 }
 
@@ -656,16 +660,6 @@ blockquote span {
     animation: moveFromBottom 1s ease both;
 }
 
-body,
-.overflow-hidden {
-    overflow: hidden;
-}
-
-.slide-01 {
-    display: block;
-    z-index: 1200;
-}
-
 @media only screen and (max-width: 1600px) {
     blockquote {
         left: 9%;
@@ -683,7 +677,11 @@ body,
     }
 
     .capa .titulo {
-        font-size: 5rem;
+        font-size: 7rem;
+    }
+
+    .ancoras h1 {
+        font-size: 4.6rem;
     }
 }
 
@@ -701,17 +699,25 @@ body,
         border-right: 2em solid #f3b562;
     }
 
-    .slide-01 .titulo {
-        font-size: 4rem;
+    .capa .titulo {
+        font-size: 6rem;
     }
 
-    .capa .titulo {
+    .ancoras h1 {
         font-size: 4rem;
-        padding: 4rem 7rem 4rem 2rem;
     }
 
     .capa .arrow-down i {
         font-size: 5rem;
+    }
+
+    .capa .arrow-down span {
+        font-size: 1.8rem;
+    }
+
+    .ancora .image-container {
+        width: 16em;
+        height: 16em;
     }
 }
 
@@ -728,8 +734,24 @@ body,
     }
 
     .capa .titulo {
-        font-size: 3rem;
-        padding: 3rem 5rem 3rem 2rem;
+        font-size: 5rem;
+    }
+
+    .ancoras h1 {
+        font-size: 4.2rem;
+    }
+
+    .ancora .image-container {
+        width: 14em;
+        height: 14em;
+    }
+
+    .back {
+        left: 0em;
+    }
+
+    .back i {
+        font-size: 4rem;
     }
 }
 
@@ -753,12 +775,25 @@ body,
         margin-right: 5%;
     }
 
-    .slide-01 .titulo {
-        font-size: 3rem;
-    }
-
     .capa .arrow-down i {
         font-size: 4rem;
+    }
+
+    .ancoras h1 {
+        font-size: 3.8rem;
+    }
+
+    .ancora {
+        width: 50%;
+    }
+
+    .ancora .image-container {
+        width: 20em;
+        height: 20em;
+    }
+
+    .back {
+        left: -1.6em;;
     }
 }
 
@@ -781,7 +816,7 @@ body,
         width: 80%;
     }
 
-    .modal .close {
+    .modal .back {
         color: #e8e8e8;
     }
 
@@ -799,15 +834,6 @@ body,
         height: 100%;
     }
 
-    .slide-01 .titulo {
-        font-size: 2rem;
-        -webkit-transform: rotate(0deg) translate(-50%, -50%);
-        -moz-transform: rotate(0deg) translate(-50%, -50%);
-        -ms-transform: rotate(0deg) translate(-50%, -50%);
-        -o-transform: rotate(0deg) translate(-50%, -50%);
-        transform: rotate(0deg) translate(-50%, -50%);
-    }
-
     .capa .image-container {
         float: none;
         width: 100%;
@@ -816,30 +842,78 @@ body,
     }
 
     .capa .titulo {
-        bottom: 10%;
-        right: 0;
-        left: inherit;
-        top: inherit;
-        /*width: 100%;*/
-        font-size: 2rem;
-        padding: 2rem 4rem 2rem 2rem;
-    }
-
-    .insubstituivel, .aprendizagem, .ensinar, .pensar, .profissional, .mudancas, .complexidade, .inovar {
-        width: 100%;
-        height: 12.5%;
-    }
-
-    .tira img {
-        width: 100% !important;
-        height: 12.5vh !important;
-        -webkit-transition: none;
-        transition: none;
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
+        font-size: 4rem;
     }
 
     .capa .arrow-down i {
         font-size: 3rem;
+    }
+
+    .capa .arrow-down span {
+        font-size: 1.6rem;
+    }
+
+    .ancoras h1 {
+        font-size: 3.2rem;
+        padding: 2rem 0;
+    }
+
+    .ancora .image-container {
+        width: 16em;
+        height: 16em;
+    }
+
+    .ancora .titulo {
+        font-size: 1.6rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .capa .titulo {
+        font-size: 3rem;
+    }
+
+    .ancoras h1 {
+        font-size: 2.6rem;
+    }
+
+    .ancora {
+        height: 18em;
+    }
+
+    .ancora .image-container {
+        width: 12em;
+        height: 12em;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .ancoras h1 {
+        font-size: 2.4rem;
+        padding: 2rem 0 1rem 0;
+    }
+
+    .ancora {
+        height: 16em;
+    }
+
+    .ancora .image-container {
+        width: 10em;
+        height: 10em;
+    }
+
+    .ancora .titulo {
+        font-size: 1.4rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .ancora {
+        height: 14em;
+    }
+
+    .ancora .image-container {
+        width: 8em;
+        height: 8em;
     }
 }
