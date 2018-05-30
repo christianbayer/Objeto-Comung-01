@@ -719,6 +719,10 @@ blockquote span {
         width: 16em;
         height: 16em;
     }
+
+    .ancora {
+        height: 24em;
+    }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -738,12 +742,17 @@ blockquote span {
     }
 
     .ancoras h1 {
-        font-size: 4.2rem;
+        font-size: 3.6rem;
+        padding: 2rem 0;
     }
 
     .ancora .image-container {
         width: 14em;
         height: 14em;
+    }
+
+    .ancora {
+        height: 22em;
     }
 
     .back {
@@ -780,11 +789,12 @@ blockquote span {
     }
 
     .ancoras h1 {
-        font-size: 3.8rem;
+        font-size: 3.2rem;
     }
 
     .ancora {
         width: 50%;
+        height: 27em;
     }
 
     .ancora .image-container {
@@ -854,8 +864,8 @@ blockquote span {
     }
 
     .ancoras h1 {
-        font-size: 3.2rem;
-        padding: 2rem 0;
+        font-size: 2.8rem;
+        padding: 1.4rem 0;
     }
 
     .ancora .image-container {
@@ -866,6 +876,10 @@ blockquote span {
     .ancora .titulo {
         font-size: 1.6rem;
     }
+
+    .ancora {
+        height: 22em;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -874,7 +888,7 @@ blockquote span {
     }
 
     .ancoras h1 {
-        font-size: 2.6rem;
+        font-size: 2.2rem;
     }
 
     .ancora {
@@ -889,7 +903,7 @@ blockquote span {
 
 @media only screen and (max-width: 500px) {
     .ancoras h1 {
-        font-size: 2.4rem;
+        font-size: 2rem;
         padding: 2rem 0 1rem 0;
     }
 
